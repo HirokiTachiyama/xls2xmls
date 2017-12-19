@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="EclipseModuleManager">
+    <libelement value="file://C:/Users/ht_2/Documents/Workspace/Libraries/poi-bin-3.12-20150511/poi-3.12/poi-3.12-20150511.jar" />
+    <libelement value="file://C:/Users/ht_2/Documents/Workspace/Libraries/poi-bin-3.12-20150511/poi-3.12/poi-examples-3.12-20150511.jar" />
+    <libelement value="file://C:/Users/ht_2/Documents/Workspace/Libraries/poi-bin-3.12-20150511/poi-3.12/poi-excelant-3.12-20150511.jar" />
+    <libelement value="file://C:/Users/ht_2/Documents/Workspace/Libraries/poi-bin-3.12-20150511/poi-3.12/poi-ooxml-3.12-20150511.jar" />
+    <libelement value="file://C:/Users/ht_2/Documents/Workspace/Libraries/poi-bin-3.12-20150511/poi-3.12/poi-ooxml-schemas-3.12-20150511.jar" />
+    <libelement value="file://C:/Users/ht_2/Documents/Workspace/Libraries/poi-bin-3.12-20150511/poi-3.12/poi-scratchpad-3.12-20150511.jar" />
+    <src_description expected_position="0">
+      <src_folder value="file://$MODULE_DIR$/src" expected_position="0" />
+    </src_description>
+  </component>
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/bin" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="library" name="poi-3.17" level="project" />
+    <orderEntry type="library" name="xmlbeans" level="project" />
+  </component>
+</module>
