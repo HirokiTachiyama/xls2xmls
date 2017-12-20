@@ -39,9 +39,7 @@ public class FileSelector extends JFrame implements ActionListener{
 	
 	public void actionPerformed(ActionEvent e){
 		JFileChooser fileChooser = new JFileChooser(".");
-		//fileChooser.setMultiSelectionEnabled(true);
 		int selected = fileChooser.showOpenDialog(this);
-		//System.out.println(selected);
 		if(selected == JFileChooser.APPROVE_OPTION){
 			File selectedFile = fileChooser.getSelectedFile();
 			selectedFileName = selectedFile.getName();
@@ -65,13 +63,4 @@ public class FileSelector extends JFrame implements ActionListener{
 		
 	}
 
-	public static String getSelectedFileName() {
-	    return selectedFileName;
-	}
-
-	public static String getPath() {
-	    return path;
-	}
-	
-	
 }
