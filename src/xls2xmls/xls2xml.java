@@ -134,12 +134,12 @@ public class xls2xml {
         	}
         }
         File file = new File(workDir+dataArrayList.get(0)+"tmp.xml");
-		write(file, document);
+		//write(file, document);
 	}
 
 	public static boolean write(File file, Document document) {
         // Transformerインスタンスの生成
-        Transformer transformer = null;
+        Transformer transformer;
         xmlReWriter xmlReWriter = new xmlReWriter();
         try {
              TransformerFactory transformerFactory = TransformerFactory.newInstance();
