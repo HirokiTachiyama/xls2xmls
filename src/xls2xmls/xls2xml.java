@@ -88,7 +88,7 @@ public class xls2xml {
 			e.printStackTrace();
 		}
         Document document = documentBuilder.newDocument();
-    	//System.out.println("****"+menuArrayList.size());
+    	System.out.println("****"+menuArrayList.size());
 
         // XML文書の作成
         Element root = document.createElement(menuArrayList.get(0).replace("ID", ""));
