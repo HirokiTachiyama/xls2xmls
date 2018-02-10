@@ -53,24 +53,30 @@ public class xls2xml {
 		}
 		Sheet sheet = workbook.getSheet("sheet1");
 
-		for(int i=0; i<Integer.MAX_VALUE; i++){
+		for(int i=0; i<Integer.MAX_VALUE; i++) { //項目名の取得
+			Row row = sheet.getRow(0); //項目名はexcelの0行目に記述してある
+			Cell cell = row.getCell(i);
+			if (cell == null) {
+				break;
+			}
+			menuArrayList.add(cell.toString());
+		}
+
+		for(int i=1; i<Integer.MAX_VALUE; i++){ //0行目は項目名なのでとばす
 			ArrayList<String> xlsArrayList = new ArrayList<>();
 			Row row = sheet.getRow(i);
 			if(row == null) { break; }
-			for(int j=0; j<Integer.MAX_VALUE; j++){
+			for(int j=0; j<menuArrayList.size(); j++){
 				Cell cell = row.getCell(j);
 				if(cell == null){ //空っぽなら抜ける
-					break;
-				} else if (i==0) { //最初のは項目用のArrayListに
-					menuArrayList.add(cell.toString());
+					xlsArrayList.add("");
 				} else { //２行目以降はデータ用のArrayListに
 					xlsArrayList.add(cell.toString());
 				}
 			}
-			if(i!=0){
-				makeXML(xlsArrayList);
-				//xlsArrayLists[xlsArrayListsCounter++] = xlsArrayList;
-			}
+
+			makeXML(xlsArrayList);
+
 		}
 	}
 

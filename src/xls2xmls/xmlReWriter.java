@@ -21,19 +21,20 @@ public class xmlReWriter {
 				System.out.println(rewriteFile.getName()+"の作成に失敗");
 			}
 			FileWriter fw = new FileWriter(rewriteFile);
-			String str = new String();
+			String str;
 			while((str = br.readLine()) != null){
 				if(str.contains("/>")){
-					//System.out.print(str + " -> ");
 					String replaceStr, forward, back;
 					forward = str.replace("/", "");
-					if(str.contains("type")){
+					if(str.contains("box type=")){
 						back = "</box>";
 					} else {
-						back = "</"+str.substring(1).replace("/>", "") + ">";
+						int squareBracketIndex = str.indexOf("<");
+						back = "</"+str.substring(squareBracketIndex + 1); //<の除去
+
+						back = back.replace("/>", "") + ">"; // />と>とを取り替え
 					}
 					replaceStr = forward + back;
-					//System.out.println(replaceStr);
 					fw.write(replaceStr+xls2xml.getCrlf());
 				} else {
 					fw.write(str+xls2xml.getCrlf());
